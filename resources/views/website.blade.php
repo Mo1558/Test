@@ -1,0 +1,1 @@
+<a href="{{route('posts.index')}}" class="btn btn-primary">{{__('Posts')}}</a>
