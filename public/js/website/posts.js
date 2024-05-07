@@ -35,16 +35,12 @@
                 },
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
-                    $('.preloader').show();
-                    $('.loader').show();
                 },
                 success: function (response) {
                     toastr.success(response.message);
                     table.ajax.reload();
                 },
                 complete: function () {
-                    $('.preloader').hide();
-                    $('.loader').hide();
                 }
             });
         }
